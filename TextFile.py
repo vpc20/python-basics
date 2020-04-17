@@ -12,12 +12,14 @@ def read_text_file2(filename):
         try:
             line = inf.readline()
         except UnicodeDecodeError:
-            print('unicode error', line)
+            print('***unicode error', line)
+            break
         else:
             print(line, end='')
             # print(len(line))
 
 
-read_text_file1('UnitTest.py')
+# read_text_file1('UnitTest.py')
+read_text_file1(r'c:\users\vpc\share\rockyou.txt')
 print(f'\n{("=" * 96)}\n')
 read_text_file2('UnitTest.py')
