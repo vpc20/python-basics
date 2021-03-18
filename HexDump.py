@@ -27,5 +27,6 @@ def hexdump(filename):
 # hexdump(r"C:\Temp\wf-01.hccapx")
 # hexdump(r"C:\Temp\reverse")
 # hexdump(r"C:\Temp\sample1.txt")
-hexdump(r"sample.txt")
+# hexdump(r"sample.txt")
+hexdump(r'C:\Users\vpc\As400Stuff\dds\cusmst.mbr')
 
