@@ -46,7 +46,7 @@ print('================ iterative dir ==============')
 list_dir_iterative(dirpath)
 
 
-for dirpath, dirnames, filenames in os.walk(r'c:\\go'):
+for dirpath, dirnames, filenames in os.walk(r'c:\\temp'):
     print(dirpath, dirnames, filenames)
     # for dirname in dirnames:
     #     print(dirpath + '\\' + dirname)
