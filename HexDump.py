@@ -2,24 +2,18 @@ def hexdump(filename):
     f = open(filename, "rb")
     s1 = f.read()
     s = ''
-    i = 0
 
     for i, b in enumerate(s1):
         if i % 16 == 0:
             print(' ' * 2, s)
             s = ''
         ch = chr(b)
-        if ch.isprintable():
-            s += ch
-        else:
-            s += '.'
-        print('{:02X}'.format(b), end=' ')
+        s += ch if ch.isprintable() else '.'
+        print(f'{b:02X}', end=' ')
 
-    i += 1
-    while i % 16 != 0:
-        print('  ', end=' ')
-        i += 1
-    print(' ' * 2, s)
+    remaining = 16 - len(s)  # to fill up hex portion with with spaces before printing the string s
+    print(' ' * (remaining * 3), end='   ')
+    print(s)
 
     f.close()
 
@@ -28,5 +22,5 @@ def hexdump(filename):
 # hexdump(r"C:\Temp\reverse")
 # hexdump(r"C:\Temp\sample1.txt")
 # hexdump(r"sample.txt")
-hexdump(r'C:\Users\vpc\As400Stuff\dds\cusmst.mbr')
-
+# hexdump(r'C:\appverifUI.dll')
+hexdump(r'C:\vfcompat.dll')
